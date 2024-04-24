@@ -1,0 +1,123 @@
+.carinfo {
+    display: flex;
+}
+
+.carimg {
+    margin-left: 15vw;
+    padding-top: 9vh;
+    padding-bottom: 6vw;
+    overflow: hidden;
+
+}
+
+.carimg img {
+    border: 0.3vw solid black;
+    border-radius: 15px;
+    width: 20vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.cartext {
+    margin-left: 8vw;
+    padding-top: 5vh;
+    box-sizing: border-box;
+}
+
+.carinfo h1 {
+    text-align: left;
+    font-size: 4vw;
+    line-height: 1.5;
+    color: #333;
+}
+
+table {
+    width: 50vw;
+    margin: 15px auto;
+}
+
+th,
+td {
+    font-size: large;
+    padding: 2vh;
+    text-align: left;
+}
+
+th {
+    font-size: large;
+    font-weight: 600;
+    width: 30%;
+}
+
+.summry,
+.aboutus {
+    margin-left: 8vw;
+    margin-right: 5vw;
+    padding-bottom: 5vh;
+    font-size: large;
+    text-wrap: wrap;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .summry,
+    .aboutus,
+    td,
+    th {
+        font-size: 2.5vw;
+    }
+
+    .carimg img {
+        width: 25vw;
+        height: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .carinfo {
+        display: grid;
+
+
+    }
+
+    .summry,
+    .aboutus,
+    td,
+    th {
+        font-size: 3vw;
+    }
+
+    .carimg img {
+        width: 50vw;
+        height: auto;
+
+    }
+
+    .carimg {
+        margin-left: 25vw;
+        padding-top: 3vw;
+        padding-bottom: 1vw;
+
+    }
+
+    table {
+        width: 80vw;
+        margin: 15px auto;
+    }
+
+    .cartext {
+        padding-top: 1vw;
+    }
+
+    .carinfo h1 {
+        text-align: center;
+        margin-right: 8vw;
+        font-size: 6vw;
+        line-height: 1.5;
+        color: #333;
+    }
+
+}

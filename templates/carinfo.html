@@ -1,0 +1,45 @@
+{% include "header.html" %}
+{% load static %}
+{% static "media" as baseUrl%}
+
+<div class="carinfo">
+    <div class="carimg">
+        <img src="/media/{{carinfo.infoimage}}" alt="car">
+    </div>
+    <div class="cartext">
+        <h1>{{car.name}}</h1>
+        <table>
+            <tr>
+                <th>Engine:</th>
+                <td>{{carinfo.engine}}</td>
+            </tr>
+            <tr>
+                <th>Transmission:</th>
+                <td>{{carinfo.transmission}}</td>
+            </tr>
+            <tr>
+                <th>Power:</th>
+                <td>{{carinfo.power}} bhp</td>
+            </tr>
+            <tr>
+                <th>Torque:</th>
+                <td>{{carinfo.torque}} nm</td>
+            </tr>
+            <tr>
+                <th>0 to 100:</th>
+                <td>{{carinfo.to100}} sec</td>
+            </tr>
+            <tr>
+                <th>Year:</th>
+                <td>{{carinfo.year}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="summry">
+    <h4>More info :</h4>
+    <p>{{carinfo.summry}}</p>
+</div>
+
+
+{% include "footer.html" %}

@@ -1,0 +1,56 @@
+.allbrands ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.allbrands li {
+    list-style: none;
+    text-align: center;
+    margin-right: auto;
+    padding-right: 2vw;
+}
+
+.allbrands a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    position: relative;
+    transition: ease-in-out 0.3s;
+}
+
+.allbrands img {
+    max-width: 18vw;
+    height: auto;
+
+    margin: 2vw;
+}
+
+.allbrands p {
+    position: relative;
+    bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.allbrands a:hover {
+    transform: scale(1.05);
+}
+
+.buties {
+    font-size: 6vw;
+    margin-left: 5vw;
+}
+
+.buties span {
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .allbrands img {
+        max-width:30vw ;
+    }
+    .allbrands p {
+        font-size: 3vw;
+    }
+}

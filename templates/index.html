@@ -1,0 +1,54 @@
+{% load static %}
+{% static "media" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href={% static "css/header.css" %}>
+    <link rel="stylesheet" href={% static "css/carinfo.css" %}>
+    <link rel="stylesheet" href={% static "css/brands.css" %}>
+    <link rel="stylesheet" href={% static "css/allbrands.css" %}>
+</head>
+
+<body>
+    <div class="bg">
+
+        <div class="navbar" id="hnavbar">
+            <h2 class="logoo" id="hlogoo">ICECAR<span>z</span></h2>
+            <ul>
+                <li><a href="{% url 'Home' %}" alt="home"><span>H</span>ome</a></li>
+                <li><a href="{% url 'AllBrands' %}" alt="Brands"><span>B</span>rands</a></li>
+                <li><a href="{% url 'AboutUs' %}" alt="About us"><span>A</span>bout Us</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="vid">
+        <video id="myVideo" autoplay muted src={% static "media/homevid.mp4" %}></video>
+    </div>
+    <div class="logo">
+        <ul>
+            {% for brand in popular_brands %}
+            <li><a href="{% url 'brandcars' brand_slug=brand.popular.slug %}"><img src="{{brand.popular.logo.url}}"
+                        alt="Logo 1">{{brand.popular.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <div class="ptext">Popular :</div>
+        <div class="popular">
+            <ul>
+                {% for car in popular_cars %}
+                <li><a href="{% url 'carinfo' car_slug=car.popular.slug %}"><img src="{{car.popular.carimage.url}}"
+                            alt="car">{{car.popular.name}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    {% include "footer.html" %}

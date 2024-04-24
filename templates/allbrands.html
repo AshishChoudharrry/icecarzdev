@@ -1,0 +1,17 @@
+{% include "header.html" %}
+{% load static %}
+{% static "media" as baseUrl%}
+
+<h1 class="buties"><span>T</span>hey create beauties !!!</h1>
+<div class="allbrands">
+    <ul>
+        {% for brand in brands %}
+        <li><a href="{% url 'brandcars' brand_slug=brand.slug %}"><img src="/media/{{brand.logo}}" alt="brand">
+                <p>{{brand.name}}</p>
+            </a></li>
+        {% endfor %}
+
+    </ul>
+</div>
+
+{% include "footer.html" %}
